@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const data = require("./data");
-console.log(data["phone"])
+// console.log(data["phone"])
 
 let arrayOfValues = Object.values(data);
 arrayOfValues = arrayOfValues.flat(1);
