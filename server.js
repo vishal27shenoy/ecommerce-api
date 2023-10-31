@@ -11,8 +11,10 @@ app.get("/searchTerm",(req,res) => {
     console.log(searchKey)
     let arr = arrayOfValues.filter((item) => {
         if (
-			item.name.toLowerCase().includes(searchKey) ||
-			item.description.toLowerCase().includes(searchKey)
+			item.name.toLowerCase().includes(searchKey.toLowerCase()) ||
+			item.description
+				.toLowerCase()
+				.includes(searchKey.toLowerCase())
 		) {
 			return {
 				item,
